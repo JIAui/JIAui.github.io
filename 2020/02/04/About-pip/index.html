@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Blog," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="PIPpip就是python标准库(The Python Standard Library)中的一个包，用来管理Python标准库中的其他包。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About:pip">
+<meta property="og:url" content="http://yoursite.com/2020/02/04/About-pip/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="PIPpip就是python标准库(The Python Standard Library)中的一个包，用来管理Python标准库中的其他包。">
+<meta property="article:published_time" content="2020-02-04T10:06:00.000Z">
+<meta property="article:modified_time" content="2020-02-04T10:22:50.491Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Blog">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/04/About-pip/"/>
+
+
+
+
+
+  <title>About:pip | Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/04/About-pip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">About:pip</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-04T18:06:00+08:00">
+                2020-02-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="PIP"><a href="#PIP" class="headerlink" title="PIP"></a>PIP</h1><p>pip就是python标准库(The Python Standard Library)中的一个包，用来管理Python标准库中的其他包。</p>
+<a id="more"></a>
+
+<h3 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h3><p>命令行直接键入<code>pip -h</code>即可查看用法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Usage:</span><br><span class="line">  pip &lt;command&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">  freeze                      Output installed packages <span class="keyword">in</span> requirements format.</span><br><span class="line">  list                        List installed packages.</span><br><span class="line">  show                        Show information about installed packages.</span><br><span class="line">  check                       Verify installed packages have compatible dependencies.</span><br><span class="line">  config                      Manage local <span class="keyword">and</span> <span class="keyword">global</span> configuration.</span><br><span class="line">  search                      Search PyPI <span class="keyword">for</span> packages.</span><br><span class="line">  wheel                       Build wheels <span class="keyword">from</span> your requirements.</span><br><span class="line">  hash                        Compute hashes of package archives.</span><br><span class="line">  completion                  A helper command used <span class="keyword">for</span> command completion.</span><br><span class="line">  debug                       Show information useful <span class="keyword">for</span> debugging.</span><br><span class="line">  help                        Show help <span class="keyword">for</span> commands.</span><br><span class="line"></span><br><span class="line">General Options:</span><br><span class="line">  -h, --help                  Show help.</span><br><span class="line">  --isolated                  Run pip <span class="keyword">in</span> an isolated mode, ignoring environment variables <span class="keyword">and</span> user configuration.</span><br><span class="line">  -v, --verbose               Give more output. Option <span class="keyword">is</span> additive, <span class="keyword">and</span> can be used up to <span class="number">3</span> times.</span><br><span class="line">  -V, --version               Show version <span class="keyword">and</span> exit.</span><br><span class="line">  -q, --quiet                 Give less output. Option <span class="keyword">is</span> additive, <span class="keyword">and</span> can be used up to <span class="number">3</span> times (corresponding to WARNING, ERROR,</span><br><span class="line">                              <span class="keyword">and</span> CRITICAL logging levels).</span><br><span class="line">  --log &lt;path&gt;                Path to a verbose appending log.</span><br><span class="line">  --proxy &lt;proxy&gt;             Specify a proxy <span class="keyword">in</span> the form [user:passwd@]proxy.server:port.</span><br><span class="line">  --retries &lt;retries&gt;         Maximum number of retries each connection should attempt (default <span class="number">5</span> times).</span><br><span class="line">  --timeout &lt;sec&gt;             Set the socket timeout (default <span class="number">15</span> seconds).</span><br><span class="line">  --exists-action &lt;action&gt;    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.</span><br><span class="line">  --trusted-host &lt;hostname&gt;   Mark this host <span class="keyword">or</span> host:port pair <span class="keyword">as</span> trusted, even though it does <span class="keyword">not</span> have valid <span class="keyword">or</span> any HTTPS.</span><br><span class="line">  --cert &lt;path&gt;               Path to alternate CA bundle.</span><br><span class="line">  --client-cert &lt;path&gt;        Path to SSL client certificate, a single file containing the private key <span class="keyword">and</span> the certificate <span class="keyword">in</span> PEM</span><br><span class="line">                              format.</span><br><span class="line">  --cache-dir &lt;dir&gt;           Store the cache data <span class="keyword">in</span> &lt;dir&gt;.</span><br><span class="line">  --no-cache-dir              Disable the cache.</span><br><span class="line">  --disable-pip-version-check</span><br><span class="line">                              Don<span class="string">'t periodically check PyPI to determine whether a new version of pip is available for download.</span></span><br><span class="line"><span class="string">                              Implied with --no-index.</span></span><br><span class="line"><span class="string">  --no-color                  Suppress colored output</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用pip安装第三方库"><a href="#使用pip安装第三方库" class="headerlink" title="使用pip安装第三方库"></a>使用pip安装第三方库</h3><p>命令行执行<code>pip install &lt;package name&gt;</code>或<code>pip install -r</code></p>
+<h3 id="卸载安装的第三方库"><a href="#卸载安装的第三方库" class="headerlink" title="卸载安装的第三方库"></a>卸载安装的第三方库</h3><p><code>pip uninstall &lt;package name&gt;</code>或<code>pip uninstall -r requirements.txt</code></p>
+<h3 id="列出已安装的包"><a href="#列出已安装的包" class="headerlink" title="列出已安装的包"></a>列出已安装的包</h3><p><code>pip list</code></p>
+<h3 id="查询可升级的包"><a href="#查询可升级的包" class="headerlink" title="查询可升级的包"></a>查询可升级的包</h3><p><code>pip list -o</code></p>
+<hr>
+<h3 id="python3-8-0下载安装好后，无法使用pip的问题"><a href="#python3-8-0下载安装好后，无法使用pip的问题" class="headerlink" title="python3.8.0下载安装好后，无法使用pip的问题"></a>python3.8.0下载安装好后，无法使用pip的问题</h3><blockquote>
+<ul>
+<li><p>cmd中到达安装目录下”python/Scripts”其中就有”pip.py”等文件.</p>
+</li>
+<li><p>输入指令”pip”查看有关pip的详细信息(即运行了pip)</p>
+</li>
+<li><p>最后将”pip.exe”所在目录添加到系统环境变量的Path变量中,例如:”E:\Program Files (x86)\Python_3.8.0\Scripts”。</p>
+<p><strong><em>(可以将系统环境变量中的path项添加python/Scripts的路径)</em></strong></p>
+</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/01/First-test/" rel="next" title="First_test">
+                <i class="fa fa-chevron-left"></i> First_test
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PIP"><span class="nav-number">1.</span> <span class="nav-text">PIP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#usage"><span class="nav-number">1.0.1.</span> <span class="nav-text">usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用pip安装第三方库"><span class="nav-number">1.0.2.</span> <span class="nav-text">使用pip安装第三方库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载安装的第三方库"><span class="nav-number">1.0.3.</span> <span class="nav-text">卸载安装的第三方库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出已安装的包"><span class="nav-number">1.0.4.</span> <span class="nav-text">列出已安装的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询可升级的包"><span class="nav-number">1.0.5.</span> <span class="nav-text">查询可升级的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python3-8-0下载安装好后，无法使用pip的问题"><span class="nav-number">1.0.6.</span> <span class="nav-text">python3.8.0下载安装好后，无法使用pip的问题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
